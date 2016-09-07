@@ -9,17 +9,20 @@ class Money
      * @var int
      */
     private $money = 1;
+
     /**
      * 红包个数
      *
      * @var int
      */
     protected $count = 10;
+
     /**
      * 第几个红包
      *
      * @var int
      */
+
     protected $i = 0;
     /**
      * 存储红包值
