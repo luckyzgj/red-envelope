@@ -30,7 +30,7 @@ class Money {
 	{
 		$this->i++;
 		//每个红包的最大值
-		$max = ($this->money-(($this->count-$this->i)*0.01))*100;
+		$max = ($this->money-( ($this->count-$this->i)*0.01) )*100;
 
 		//控制前面的红包的范围
 		if( $max >= 2 ) {
@@ -38,7 +38,6 @@ class Money {
 		}else {
 			$round = 0;
 		}
-
 
 		$one = mt_rand(1,$max-$round)/100;
 		//push 到数组
@@ -59,9 +58,7 @@ class Money {
 			}
 			//echo number_format($this->money,2);
 		}
-
 	}
-
 }
 
 (new Money())->getMoney();
