@@ -38,14 +38,11 @@ class Money {
 		}else {
 			$round = 0;
 		}
-
 		$one = mt_rand(1,$max-$round)/100;
 		//push 到数组
 		array_push($this->arr,number_format($one,2));
-
 		//剩下的money
 		$this->money -= $one;
-
 		//echo number_format($one,2)."<br>";
 		//最后一个红包就不用随机了
 		if($this->i < $this->count-1){
