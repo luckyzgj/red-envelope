@@ -1,6 +1,7 @@
 <?php 
 
 class Money {
+    
 	/**
 	 * 红包金额
 	 *
