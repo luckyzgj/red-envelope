@@ -1,35 +1,39 @@
 <?php 
 
-Class Money {
+class Money {
 	/**
 	 * 红包金额
+	 *
 	 * @var int
 	 */
-	private  $money =1;
+	private  $money = 1;
 	/**
 	 * 红包个数
+	 *
 	 * @var int
 	 */
 	protected $count = 10;
 	/**
 	 * 第几个红包
+	 *
 	 * @var int
 	 */
-	protected $i =0;
+	protected $i = 0;
 	/**
 	 * 存储红包值
+	 *
 	 * @var array
 	 */
 	protected $arr =array();
 
-	function getMoney()
+	public function getMoney()
 	{
 		$this->i++;
 		//每个红包的最大值
 		$max = ($this->money-(($this->count-$this->i)*0.01))*100;
 
 		//控制前面的红包的范围
-		if($max >= 2) {
+		if( $max >= 2 ) {
 			$round = mt_rand(1,$max-1);
 		}else {
 			$round = 0;
@@ -57,10 +61,6 @@ Class Money {
 		}
 
 	}
-
-
-
-
 
 }
 
